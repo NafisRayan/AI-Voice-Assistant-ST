@@ -171,6 +171,14 @@ if __name__ == '__main__':
             query = query.replace("search", "")
             query = query.replace("play", "")
             webbrowser.open(query)
+        
+        elif "search in google" in query:
+            query = query.replace("search in google", "")
+            search = query
+            speak("User asked for google to search")
+            speak(search)
+            webbrowser.open("https://www.google.com/search?q=" + search + "")
+
         elif "don't listen" in query or "stop listening" in query:
             speak("for how much time you want to stop jarvis from listening commands")
             a = int(takeCommand())
@@ -182,12 +190,7 @@ if __name__ == '__main__':
             speak("User asked to Locate")
             speak(location)
             webbrowser.open("https://www.google.com/maps/place/" + location + "")
-        elif "search in google" in query:
-            query = query.replace("search in google", "")
-            search = query
-            speak("User asked for google to search")
-            speak(search)
-            webbrowser.open("https://www.google.com/search?q=" + search + "")
+        
         elif "camera" in query or "take a photo" in query:
             ec.capture(0, "Jarvis Camera ", "img.jpg")
         elif "take a screenshot" in query:
@@ -234,11 +237,9 @@ if __name__ == '__main__':
         elif "ask ai" in query:
             speak("Got it")
             query = query.replace("ask ai", "")
-            output = gai(query)
+            output = gai(query).replace("*", "")
             print(output)
             speak(output)
 			
 
 #-----------------------------------------------Main Code Execution Ends Here ------------------------------------------
-				
-
