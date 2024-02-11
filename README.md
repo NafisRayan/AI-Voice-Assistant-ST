@@ -40,11 +40,11 @@ And other common Python libraries listed in requirements.txt
 
 ## Usage
 
-Run `python assistant.py` to start the virtual assistant. Say "Hey Jarvis" or "Jarvis" to activate it. Other example voice commands:
+Run `python assistant.py` to start the virtual assistant. Just run it to activate it. Other example voice commands:
 
 - "What time is it?"
 - "Search YouTube for funny videos" 
-- "Send an email to john@doe.com"
+- "Send an email to nafisrayan123@gmail.com"
 - "Take a screenshot"
 
 See the code comments for full documentation of features.
