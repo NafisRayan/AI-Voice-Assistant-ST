@@ -28,7 +28,7 @@ import google.generativeai as genai
 import pyautogui
 
 # Set up the model
-genai.configure(api_key="AIzaSyDGD5HB6mAH-jnAiXTcibvXNMIt7kaz8q4")
+genai.configure(api_key="AIzaSyCBXDRml2-v-qT7zzfyq4YqfviSVPcOI6s")
 generation_config = {
   "temperature": 0.9,
   "top_p": 1,
