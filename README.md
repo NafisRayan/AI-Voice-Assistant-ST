@@ -1,5 +1,5 @@
 # AI-Voice-Assistant
-AI voice assistant made with python and powered by GEMINI  
+AI voice assistant made with python and powered by GEMINI and MISTRAL.
 
 # Virtual Assistant Python Project
 
@@ -20,6 +20,7 @@ This is a virtual assistant application built in Python that can understand voic
 - Writing notes
 - Getting weather information
 - Integrated with Google's generative AI models
+- Integrated with HuggingFace's Mistral AI model
 
 ## Requirements
 
@@ -35,12 +36,13 @@ This is a virtual assistant application built in Python that can understand voic
 - os
 - pyautogui
 - google.generativeai
+- huggingface_hub
 
 And other common Python libraries listed in requirements.txt
 
 ## Usage
 
-Run `python assistant.py` to start the virtual assistant. Just run it to activate it. Other example voice commands:
+Run `python assistant {model_name}.py` to start the virtual assistant. Just run it to activate it. Other example voice commands:
 
 - "What time is it?"
 - "Search YouTube for funny videos" 
