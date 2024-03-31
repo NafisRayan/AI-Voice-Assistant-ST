@@ -18,3 +18,4 @@ PyPDF2
 pyinstaller
 keyboard
 opencv-python
+huggingface_hub
