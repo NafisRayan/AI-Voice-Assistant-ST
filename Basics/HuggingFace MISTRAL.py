@@ -8,7 +8,7 @@ def format_prompt(message, history):
     prompt += f"[INST] {message} [/INST]"
     return prompt
 
-def generate(prompt, history, temperature=0.9, max_new_tokens=256, top_p=0.95, repetition_penalty=1.0):
+def generate(prompt, history, temperature=0.9, max_new_tokens=1024, top_p=0.95, repetition_penalty=1.0):
     temperature = float(temperature)
     if temperature < 1e-2:
         temperature = 1e-2
@@ -25,12 +25,14 @@ def generate(prompt, history, temperature=0.9, max_new_tokens=256, top_p=0.95, r
 
     formatted_prompt = format_prompt(prompt, history)
 
-    client = InferenceClient("mistralai/Mixtral-8x7B-Instruct-v0.1")
+    client = InferenceClient(model= "mistralai/Mixtral-8x7B-Instruct-v0.1", token='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')
     stream = client.text_generation(formatted_prompt, **generate_kwargs, stream=True, details=True, return_full_text=False)
     output = ""
 
     for response in stream:
         output += response.token.text
+    
+    output = output.replace("<s>", "").replace("</s>", "")
     
     yield output
     return output
