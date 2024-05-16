@@ -17,4 +17,3 @@ opencv-python
 huggingface_hub
 streamlit
 winshell
-win32con
