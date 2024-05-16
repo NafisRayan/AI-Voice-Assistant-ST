@@ -1,11 +1,9 @@
 pyttsx3
 speechrecognition
 wikipedia
-smtplib
 pyjokes
 datetime
 wolframalpha
-os-sys
 PyAutoGUI
 google-generativeai
 requests
