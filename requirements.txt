@@ -16,3 +16,4 @@ keyboard
 opencv-python
 huggingface_hub
 streamlit
+winshell
