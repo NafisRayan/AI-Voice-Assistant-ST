@@ -23,7 +23,7 @@ st.markdown(bg_image, unsafe_allow_html=True)
 
 st.title("AI Voice Assistant")
 
-Model = st.selectbox("Select your prefered model:", ["GEMINI", "MISTRAL8X", "PHI-3"])
+Model = st.selectbox("Select your prefered model:", ["GEMINI", "MISTRAL8X", "PHI-3", "Custom Models"])
 
 if Model == "GEMINI":
     tkey = st.text_input("Gemenai API key here:", "")
@@ -71,8 +71,10 @@ else:
 
     if Model == "MISTRAL8X":
         mkey= "mistralai/Mixtral-8x7B-Instruct-v0.1"
-    else:
+    elif Model == "PHI-3":
         mkey = "microsoft/Phi-3-mini-4k-instruct"
+    else:
+        mkey = st.text_input("Your HuggingFace Model String here:", "")
 
     def format_prompt(message, history):
         prompt = ""
