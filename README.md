@@ -25,6 +25,7 @@ This is a virtual assistant application built in Python that can understand voic
 ## Requirements
 
 - python 3.x
+- pyaudio
 - pyttsx3
 - speechRecognition
 - wikipedia 

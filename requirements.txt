@@ -1,4 +1,5 @@
 pyttsx3
+pyaudio
 speechrecognition
 wikipedia
 pyjokes
